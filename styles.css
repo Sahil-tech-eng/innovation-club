@@ -1,0 +1,197 @@
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+h1 {
+    margin: 20px 50px;
+    color: #007acc;
+}
+
+h2 {
+    margin: 10px 0 20px;
+    color: #666;
+}
+
+h2.bold {
+    font-weight: bold;
+    color: #333;
+}
+
+h3 {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Header styles */
+
+header {
+    background-color: #007acc;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #005fa3;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar li a:hover {
+    background-color: #007acc;
+}
+
+/* Main content styles */
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007acc;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #005fa3;
+}
+
+.content-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+/* Add class to content-row to reverse order on even rows */
+
+.content-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.image-box {
+    width: 400px;
+    height: 300px;
+    background-color: #e0e0e0;
+    margin: 10px 20px;
+    border: 2px solid #ccc;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-box.meeting {
+    background-image: url('img1.jpg');
+}
+
+.image-box.workshop {
+    background-image: url('img2.jpg');
+}
+
+.image-box.pitch {
+    background-image: url('img3.jpg');
+}
+
+.image-box.networking {
+    background-image: url('img4.jpg');
+}
+
+.text-box {
+    text-align: left;
+    max-width: 600px;
+    margin: 10px 20px;
+}
+
+/* Footer styles */
+
+footer {
+    background-color: #005fa3;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.contact-us {
+    margin: 20px 0;
+    color: #fff;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 1.5em;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .content-row {
+        flex-direction: column;
+    }
+    .text-box, .image-box {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
